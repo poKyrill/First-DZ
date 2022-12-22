@@ -58,20 +58,19 @@ ul {
 
 /* Хэдер */
 .header {
-  position: fixed;
-  width: 100%;
-  top: 0;
-  left: 0;
-  z-index: 50;
+  padding-top: 42px;
 }
 
 .header__body {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   padding: 0px 10px;
-  /* padding-top: 34px; */
   justify-content: space-between;
-  height: 90px;
+}
+
+.nav__list__container {
+  padding: 11px;
 }
 
 .nav__list {
@@ -80,17 +79,12 @@ ul {
   align-items: center;
   padding: 0;
   margin: 0;
-  margin-left: 216px;
+  gap: 66px;
 }
 
 .list__item {
   list-style: none;
-  margin-right: 66px;
 }
-
-/* .list__item:last-child {
-  margin-right: 485px;
-} */
 
 .list__item a:hover {
   color: #ffffff;
@@ -121,17 +115,13 @@ ul {
   line-height: 25px;
   color: rgba(255, 255, 255, 0.6);
 }
-
-.nav {
-  display: flex;
-}
 /* Header END */
 
 /* Hero */
 /* Hero content */
 .hero {
   display: flex;
-  margin-top: 90px;
+  margin-top: 115px;
 }
 
 h1 {
@@ -275,7 +265,7 @@ h1 span {
   border-radius: 8.84367px;
   display: flex;
   position: absolute;
-  top: 479px;
+  top: 569px;
   left: 1161px;
   z-index: 1;
 }
