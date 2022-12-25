@@ -460,18 +460,203 @@ h1 span {
 .top__list {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .top__item__img1 {
   background: url(../img/Apollo.png);
-  
+  width: 437.76px;
+  height: 384.7px;
+}
+
+.top__item__img2 {
+  background: url(../img/Sassy.png);
+  width: 437.76px;
+  height: 384.7px;
+}
+
+.top__item__img3 {
+  background: url(../img/Satisfying.png);
+  width: 437.76px;
+  height: 384.7px;
 }
 
 .top__content {
   background: url(../img/top_secondary_1.svg);
   width: 437.76px;
   height: 236.16px;
+  display: flex;
+  gap: 14.32px;
 }
+
+/* top__list */
+/* Top content left */
+.top__content__left p:first-child {
+  font-family: 'Rajdhani';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 23.0401px;
+  line-height: 46px;
+  color: var(--main-color-white);
+
+  margin-left: 30px;
+  margin-top: 36px;
+}
+
+.top__nickname {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin-bottom: 13px;
+}
+
+.top__nickname img:first-child {
+  margin-left: 30px;
+}
+
+.reserve_price {
+  font-family: 'Rajdhani';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14.4001px;
+  line-height: 46px;
+
+  color: var(--main-color-white);
+  opacity: 0.7;
+
+  margin-left: 30px;
+}
+
+.top__price {
+  display: flex;
+  margin-left: 30px;
+  align-items: center;
+  gap: 7.5px;
+}
+
+.top__price p {
+  font-family: 'Orbitron';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 12.6587px;
+  line-height: 16px;
+
+  color: var(--main-color-white);
+}
+
+.top__price span {
+  font-family: 'Rajdhani';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14.4001px;
+  line-height: 46px;
+  color: #FFFFFF;
+
+  opacity: 0.7;
+  margin-left: 7.2px;
+}
+/* Top content left END */
+
+/* Top content right */
+.top__right__header {
+  font-family: 'Rajdhani';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14.4001px;
+  line-height: 46px;
+  color: var(--main-color-white);
+
+  opacity: 0.7;
+
+  margin-top: 36px;
+  margin-left: 10px;
+}
+
+.top__content__list {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 26px;
+}
+
+.top__list li {
+  font-family: 'Rajdhani';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 23.0401px;
+  color: var(--main-color-white);
+  margin-left: 7.5px;
+}
+
+.top__list p {
+  font-family: 'Rajdhani';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14.4001px;
+  color: var(--main-color-white);
+
+  opacity: 0.7;
+}
+
+.top__link a {
+  background: url(../img/top_place_bid.svg);
+  text-decoration: none;
+  font-family: 'Rajdhani';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 23.0401px;
+  line-height: 29px;
+
+  color: var(--main-color-white);
+  padding: 10px 20px 10px 13px;
+}
+
+.top__link img {
+  margin-left: 13px;
+}
+/* Top content right END */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 @media (max-width: 767px) {
   /* HEADER */
