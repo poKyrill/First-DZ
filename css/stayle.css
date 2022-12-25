@@ -28,7 +28,7 @@ body {
   width: 100%;
   max-width: 1600px;
   height: 100%;
-  position: relative;
+  /* position: relative; */
 }
 /*  */
 
@@ -61,15 +61,28 @@ ul {
   padding-top: 42px;
 }
 
+.header__burger {
+  display: none;
+}
+
+.header__nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 808px;
+}
+
 .header__body {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   padding: 0px 10px;
   justify-content: space-between;
+  position: relative;
+  /* height: 80px; */
 }
 
-.nav__list__container {
+.header__menu {
   padding: 11px;
 }
 
@@ -121,7 +134,8 @@ ul {
 /* Hero content */
 .hero {
   display: flex;
-  margin-top: 115px;
+  margin-top: 105px;
+  position: relative;
 }
 
 h1 {
@@ -159,7 +173,6 @@ h1 span {
 }
 
 .hero__link a {
-  z-index: 2;
   text-decoration: none;
   font-family: "Orbitron";
   font-weight: 700;
@@ -244,16 +257,19 @@ h1 span {
 
 .wave {
   position: absolute;
-  top: 517px;
-  left: 835px;
+  top: 330px;
+  left: 731px;
 }
 /* Hero content END */
 
 /* Hero IMG */
+.hero__img__main {
+  position: relative;
+}
+
 .hero_img_1 {
   margin-top: 16px;
   margin-left: 54px;
-  z-index: 50;
 }
 
 .hero__img__content {
@@ -265,9 +281,8 @@ h1 span {
   border-radius: 8.84367px;
   display: flex;
   position: absolute;
-  top: 569px;
-  left: 1161px;
-  z-index: 1;
+  top: 375px;
+  left: 156px;
 }
 
 .hero__content_left {
@@ -403,8 +418,9 @@ h1 span {
   margin-top: 125px;
   height: 53px;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
-  margin-bottom: 221px;
+  margin-bottom: 217px;
 }
 /* hero__img END */
 /* Hero END */
@@ -438,11 +454,141 @@ h1 span {
 
 .viewall img {
   margin-left: 16.6px;
+  margin-right: 9px;
 }
 
 .top__list {
   display: flex;
+  justify-content: space-between;
+}
+
+.top__item__img1 {
+  background: url(../img/Apollo.png);
+  
 }
 
 .top__content {
+  background: url(../img/top_secondary_1.svg);
+  width: 437.76px;
+  height: 236.16px;
+}
+
+@media (max-width: 767px) {
+  /* HEADER */
+  .header__body {
+    flex-wrap: nowrap;
+    align-items: center;
+    padding: 0;
+  }
+
+  .header__burger {
+    display: block;
+    position: relative;
+    width: 30px;
+    height: 20px;
+  }
+
+  .header {
+    padding-top: 12px;
+  }
+
+  .sighn__up {
+    display: none;
+  }
+
+  .header a {
+    font-size: 16.1279px;
+    line-height: 20px;
+  }
+
+  .logo {
+    z-index: 2;
+    margin-left: 23px;
+  }
+
+  .logo img {
+    width: 13.5px;
+    height: 22.5px;
+  }
+
+  .header__burger span {
+    position: absolute;
+    background-color: #ffffff;
+    height: 3px;
+    width: 14px;
+    top: 9px;
+    right: 30px;
+    border-radius: 2px;
+    transition: all 0.3s ease 0s;
+  }
+
+  .header__burger::after, .header__burger::before {
+    content: '';
+    position: absolute;
+    background-color: #fff;
+    width: 22px;
+    height: 3px;
+    right: 30px;
+    border-radius: 2px;
+    transition: all 0.3s ease 0s;
+  }
+
+  .header__burger::after {
+    bottom: 0;
+  }
+
+  .header__burger.active::before {
+    transform: matrix(-1, 0, 0, 1, 0, 0);
+    top: 9px;
+  }
+
+  .header__burger.active::after {
+    transform: matrix(-1, 0, 0, 1, 0, 0);
+    bottom: 9px;
+  }
+
+  .header__burger.active span {
+    transform: matrix(-1, 0, 0, 1, 0, 0);
+  }
+
+  .header__menu {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: -100%;
+    left: 0;
+    padding: 0;
+    margin-top: 48px;
+    overflow: auto;                                                     /* для скролла меню */
+    transition: all 0.3s ease 0s;
+  }
+
+  .header__menu.active {
+    top: 12px;
+    background-color: rgb(64, 1, 119);
+  }
+
+  .nav__list {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+
+  .list__item {
+    padding: 25px;
+    padding-left: 23px;
+  }
+
+  .hero__img {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  body.lock {
+    overflow: hidden;                                                       /* убираем скролл под меню */
+  }
+  /* HEADER END */
+
+  /* HERO */
+
 }
