@@ -486,11 +486,22 @@ h1 span {
   width: 437.76px;
   height: 236.16px;
   display: flex;
-  gap: 14.32px;
 }
 
 /* top__list */
 /* Top content left */
+.top__content__left__1 {
+  margin-right: 22px;
+}
+
+.top__content__left__2 {
+  margin-right: 28px;
+}
+
+.top__content__left__3 {
+  margin-right: 59px;
+}
+
 .top__content__left p:first-child {
   font-family: 'Rajdhani';
   font-style: normal;
@@ -597,17 +608,25 @@ h1 span {
   opacity: 0.7;
 }
 
-.top__link a {
+.top__link {
   background: url(../img/top_place_bid.svg);
+  background-size: cover;
+  width: 158px;
+  height: 54px;
+}
+
+.top__link a {
   text-decoration: none;
   font-family: 'Rajdhani';
   font-style: normal;
   font-weight: 600;
   font-size: 23.0401px;
   line-height: 29px;
+  display: block;
 
   color: var(--main-color-white);
-  padding: 10px 20px 10px 13px;
+  padding-left: 13px;
+  padding-top: 13px;
 }
 
 .top__link img {
