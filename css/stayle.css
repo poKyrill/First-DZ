@@ -486,6 +486,10 @@ h1 span {
   margin-bottom: 162px;
 }
 
+.top_slider_link {
+  display: none;
+}
+
 .top__header {
   display: flex;
   justify-content: space-between;
@@ -1348,7 +1352,7 @@ input {
   color: #474a57;
 }
 
-button {
+.subscribe button {
   background: url(../img/button_subscribe.svg);
   width: 148px;
   height: 54px;
@@ -1363,7 +1367,7 @@ button {
   cursor: pointer;
 }
 
-button:hover {
+.subscribe button:hover {
   color: var(--main-color-white);
   opacity: 0.6;
   transition: 0.5s;
@@ -1935,6 +1939,7 @@ button:hover {
   .top {
     margin-top: 200px;
     margin-left: 25px;
+    min-width: 0;
   }
 
   .viewall {
@@ -1943,6 +1948,7 @@ button:hover {
 
   .top__header {
     margin-bottom: 36px;
+    width: auto;
   }
 
   .top__header h2 {
@@ -1958,7 +1964,10 @@ button:hover {
   .top__list {
     margin-left: 0;
     width: auto;
-    gap: 24px;
+  }
+
+  .top__item {
+    margin-right: 25px;
   }
 
   .top__item__img1,
@@ -2081,5 +2090,74 @@ button:hover {
     height: 9px;
     margin-left: 14px;
     margin-top: 11px;
+  }
+
+  /* Slider */
+  /* .slick-track {
+    display: flex;
+  }
+
+  .slick-list {
+    overflow: auto;
+  }
+
+  .slider {
+    position: relative;
+    min-width: 0;
+  }
+
+  .slider__item {
+    min-width: 0;
+  } */
+
+  .swiper-container,
+  .swiper-wrapper {
+    min-width: 0;
+  }
+
+  .swiper {
+    width: 100%;
+    height: 100%;
+  }
+
+  /* Slider link */
+  .top_slider_link {
+    display: block;
+    background: url(../img/top_button_next_explore_slider.svg) no-repeat;
+    width: 137px;
+    height: 38px;
+    /* margin: 37px auto 109px; */
+    margin-top: 37px;
+    margin-left: 94px;
+    display: flex;
+  }
+
+  .top_slider_link a {
+    text-decoration: none;
+    font-family: "Orbitron";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 12px;
+
+    color: var(--main-color-white);
+    display: flex;
+    align-items: center;
+    margin-left: 30px;
+  }
+
+  .top_slider_link img {
+    width: 28px;
+    height: 9px;
+    margin-left: 9px;
+  }
+  /* Slider END */
+
+  .explore__collections {
+    margin: 0 auto;
+  }
+
+  .explore__collections h2 {
+    font-size: 16px;
+    
   }
 }
