@@ -253,7 +253,7 @@ h1 span {
 }
 
 .hero__counter {
-  margin-top: 64px;
+  margin-top: 66px;
   width: 480px;
 }
 
@@ -277,7 +277,6 @@ h1 span {
   font-family: "Aldrich";
   font-weight: 400;
   font-size: 39.8px;
-  line-height: 1.3;
   letter-spacing: 0.221092px;
 
   color: var(--main-color-white);
@@ -307,26 +306,36 @@ h1 span {
 .container__for__responsive {
   /* обёртка для перестановки порядка отображения в моб версии */
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.hero__img {
+  margin-top: 105px;
 }
 
 .hero__img__main {
   position: relative;
 }
 
-.hero_img_1 {
+.hero__img__main__img {
+  background: url(../img/hero.png);
+  width: 401.28px;
+  height: 477.33px;
   margin-top: 16px;
-  margin-left: 48px;
+  margin-left: 52px;
+  filter: drop-shadow(0px 4.42184px 4.42184px rgba(0, 0, 0, 0.25))
+    drop-shadow(0px 4.42184px 4.42184px rgba(0, 0, 0, 0.25))
+    drop-shadow(0px 4.42184px 4.42184px rgba(0, 0, 0, 0.25));
 }
 
 .hero__img__content {
   width: 336px;
   height: 181px;
-  background: url(../img/Hero_img_2.png);
+  background: url(../img/Hero_img_2.png) no-repeat;
   border-radius: 8.84367px;
   display: flex;
   position: absolute;
-  top: 375px;
+  top: 359px;
   left: 208px;
 }
 
@@ -460,7 +469,7 @@ h1 span {
 }
 
 .logo__container {
-  margin-top: 130px;
+  margin-top: 132px;
   height: 53px;
   display: flex;
   flex-wrap: wrap;
@@ -526,25 +535,25 @@ h1 span {
 }
 
 .top__item__img1 {
-  background: url(../img/Apollo.png);
+  background: url(../img/Apollo.png) no-repeat;
   width: 437.76px;
   height: 384.7px;
 }
 
 .top__item__img2 {
-  background: url(../img/Sassy.png);
+  background: url(../img/Sassy.png) no-repeat;
   width: 437.76px;
   height: 384.7px;
 }
 
 .top__item__img3 {
-  background: url(../img/Satisfying.png);
+  background: url(../img/Satisfying.png) no-repeat;
   width: 437.76px;
   height: 384.7px;
 }
 
 .top__content {
-  background: url(../img/top_secondary_1.svg);
+  background: url(../img/top_secondary_1.svg) no-repeat;
   width: 437.76px;
   height: 236.16px;
   display: flex;
@@ -1567,7 +1576,7 @@ button:hover {
 
   /* HEADER */
   .header {
-    padding-top: 21px;
+    padding-top: 12px;
     margin-bottom: 44px;
   }
 
@@ -1748,13 +1757,14 @@ button:hover {
   }
 
   .hero__counter {
-    margin: 0px 30px 40px 30px;
+    margin: 0px 30px;
     width: auto;
   }
 
   .hero__list {
     display: flex;
     justify-content: space-between;
+    max-width: 295px;
   }
 
   .hero__item {
@@ -1762,6 +1772,16 @@ button:hover {
     line-height: 28px;
     letter-spacing: 0.117972px;
     border: none !important;
+  }
+
+  .hero__item p {
+    font-family: "Lato";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    letter-spacing: 0.117972px;
+
+    color: rgba(255, 255, 255, 0.6);
   }
 
   .hero__item:first-child {
@@ -1779,7 +1799,16 @@ button:hover {
   }
 
   .logo__container {
-    width: auto;
+    min-width: 320px;
+    order: 1;
+    margin: 0 30px;
+    margin-top: 35px;
+    height: auto;
+    align-items: center;
+  }
+
+  .logo__container img {
+    margin-bottom: 32px;
   }
 
   .logo__container img:first-child {
@@ -1800,20 +1829,257 @@ button:hover {
   }
 
   .hero__img {
+    order: 2;
+    display: flex;
     margin: 0 auto;
+    margin-top: 26px;
   }
 
-  .hero_img_1 {
+  .hero__img__main__img {
+    background: url(../img/hero_responsive.png);
     margin: 0;
     padding: 0;
     width: 324px;
     height: 385.4px;
-    display: block;
-    text-align: center;
   }
 
   .hero__img__content {
-    position: unset;
+    top: 337px;
+    left: 0;
+    width: 325px;
+    height: 176px;
+    background-size: contain;
+  }
 
+  .hero__content_left {
+    margin-left: 22px;
+    margin-top: 1px;
+  }
+
+  .hero__content_left p:first-child {
+    font-size: 17.0526px;
+    margin-top: 32px;
+    margin-left: 1px;
+  }
+
+  .nickname {
+    font-size: 14.9211px;
+    line-height: 34px;
+  }
+
+  .nickname img:first-child {
+    width: 28.5px;
+    height: 28.5px;
+  }
+
+  .nickname span {
+    margin-left: 3px;
+    margin-right: 4px;
+  }
+
+  .hero__price {
+    margin-top: 8px;
+  }
+
+  .hero__price__header {
+    font-size: 10.6579px;
+  }
+
+  .hero__price img {
+    width: 10.54px;
+    height: 17.16px;
+    margin-left: 1px;
+  }
+
+  .hero__price p {
+    line-height: 0;
+    font-size: 9.36903px;
+  }
+
+  .hero__price span {
+    line-height: 0;
+    font-size: 10.6579px;
+  }
+
+  .hero__content__right {
+    margin-top: 1px;
+  }
+
+  .hero__list__title {
+    font-size: 10.6579px;
+    margin: 36px 0 4px 52px;
+  }
+
+  .hero__small__list {
+    margin-left: 51px;
+    max-width: 104px;
+  }
+
+  .hero__link__placebid {
+    margin-top: 25px;
+    margin-left: 42px;
+    width: 120px;
+    height: 41px;
+  }
+
+  .hero__small__link {
+    font-size: 17.0526px;
+    padding-left: 12px;
+  }
+
+  .hero__small__link img {
+    margin-left: 9px;
+    margin-top: -4px;
+  }
+
+  .top {
+    margin-top: 200px;
+    margin-left: 25px;
+  }
+
+  .viewall {
+    display: none;
+  }
+
+  .top__header {
+    margin-bottom: 36px;
+  }
+
+  .top__header h2 {
+    font-family: "Orbitron";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+    margin-left: 1px;
+    margin-top: 35px;
+  }
+
+  .top__list {
+    margin-left: 0;
+    width: auto;
+    gap: 24px;
+  }
+
+  .top__item__img1,
+  .top__item__img2,
+  .top__item__img3 {
+    width: 305px;
+    height: 268px;
+    background-size: contain;
+  }
+
+  .top__content {
+    width: 306px;
+    height: 165px;
+    background-size: contain;
+    margin-top: -1px;
+  }
+
+  .top__content__left__1 p:first-child,
+  .top__content__left__2 p:first-child,
+  .top__content__left__3 p:first-child {
+    font-size: 13.6006px;
+    margin: 41px 0 18px 22px;
+    width: 100%;
+    min-width: 120px;
+    line-height: 0;
+  }
+
+  .top__content__left {
+    margin-right: 22px;
+  }
+
+  .top__nickname {
+    gap: 0;
+    margin-bottom: 19px;
+  }
+
+  .top__nickname span {
+    font-size: 11.9006px;
+    margin-right: 13px;
+  }
+
+  .top__nickname img:first-child {
+    width: 26px;
+    height: 26px;
+    margin-left: 20px;
+    margin-right: 3px;
+  }
+
+  .top__nickname img {
+    width: 11px;
+    height: 12px;
+  }
+
+  .reserve_price {
+    font-size: 8.5004px;
+    margin-left: 22px;
+  }
+
+  .top__price {
+    gap: 0;
+    margin-left: 21px;
+    margin-top: 6px;
+  }
+
+  .top__price p {
+    font-size: 7.47244px;
+    line-height: 0;
+  }
+
+  .top__price span {
+    font-size: 8.5004px;
+    line-height: 0;
+    margin-left: 12px;
+  }
+
+  .top__price img {
+    width: 11px;
+    height: 19px;
+    margin-right: 5px;
+  }
+
+  .top__right__header {
+    font-size: 8.5004px;
+    margin-top: 35px;
+    margin-left: 21px;
+    margin-bottom: 16px;
+  }
+
+  .top__content__list {
+    margin-bottom: 33px;
+    margin-left: 18px;
+    width: 96px;
+  }
+
+  .top__content__list li {
+    font-size: 13.6006px;
+    line-height: 0;
+    text-align: center;
+  }
+
+  .top__content__list p {
+    font-size: 8.5004px;
+    margin-top: 15px;
+  }
+
+  .top__link {
+    margin-left: 12px;
+    width: 112px;
+    height: 38px;
+  }
+
+  .top__link a {
+    font-size: 13.6006px;
+    padding-left: 11px;
+    padding-top: 3px;
+  }
+
+  .top__link img {
+    width: 31px;
+    height: 9px;
+    margin-left: 14px;
+    margin-top: 11px;
   }
 }
