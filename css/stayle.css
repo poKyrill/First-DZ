@@ -175,7 +175,7 @@ h1 {
   font-size: 66.3276px;
   line-height: 1.37;
   color: var(--main-color-white);
-  width: 848px;
+  max-width: 848px;
   margin-bottom: 21px;
   margin-left: 3px;
 }
@@ -311,6 +311,7 @@ h1 span {
 
 .hero__img {
   margin-top: 105px;
+  width: 544px;
 }
 
 .hero__img__main {
@@ -502,7 +503,8 @@ h1 span {
   line-height: 33px;
 
   color: var(--main-color-white);
-  width: 1390px;
+  max-width: 1390px;
+  width: 100%;
 }
 
 .top__header h2 {
@@ -518,6 +520,10 @@ h1 span {
   display: flex;
   align-items: center;
   color: var(--main-color-white);
+  font-family: "Orbitron";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 26.531px;
 }
 
 .viewall a:hover {
@@ -535,7 +541,9 @@ h1 span {
   justify-content: space-between;
   flex-wrap: wrap;
   margin-left: 7px;
-  width: 1384px;
+  /* max-width: 1384px;
+  width: 100%; */
+  width: 1418px;
 }
 
 .top__item__img1 {
@@ -825,7 +833,7 @@ h1 span {
   border-radius: 2px;
 }
 
-.explore__collections img {
+.girl {
   margin-top: -1px;
 }
 /* 1-st part END */
@@ -843,7 +851,7 @@ h1 span {
   justify-content: space-between;
   align-items: center;
   margin-bottom: 46px;
-  width: 1376px;
+  width: 1384px;
 }
 
 .second__title {
@@ -855,23 +863,6 @@ h1 span {
   margin-left: 1px;
 }
 
-.explore__second__part__header a {
-  font-family: "Orbitron";
-  font-style: normal;
-  font-weight: 700;
-  font-size: 26.531px;
-  color: var(--main-color-white);
-  text-decoration: none;
-  display: flex;
-  align-items: center;
-  gap: 18px;
-}
-
-.explore__second__part__header a:hover {
-  opacity: 0.6;
-  transition: 0.5s;
-}
-
 .explore__second__list {
   display: flex;
   flex-wrap: wrap;
@@ -881,6 +872,8 @@ h1 span {
 }
 
 .explore__second__item {
+  display: flex;
+  flex-direction: column;
   width: 436px;
   height: 562px;
   padding-top: 4px;
@@ -888,19 +881,19 @@ h1 span {
 }
 
 .explore__second__item__1 {
-  background: url(../img/explore_second_part_list_background_1.png);
+  background: url(../img/explore_second_part_list_background_1.png) no-repeat;
 }
 
 .explore__second__item__2 {
-  background: url(../img/explore_second_part_list_background_2.png);
+  background: url(../img/explore_second_part_list_background_2.png) no-repeat;
 }
 
 .explore__second__item__3 {
-  background: url(../img/explore_second_part_list_background_3.png);
+  background: url(../img/explore_second_part_list_background_3.png) no-repeat;
 }
 
 .expl_sec_list_top {
-  background: url(../img/Explore_Collection_1_3.png);
+  background: url(../img/Explore_Collection_1_3.png) no-repeat;
   width: 432px;
   height: 206px;
 }
@@ -1035,7 +1028,7 @@ h1 span {
   margin-bottom: 158px;
 }
 
-._top__sellers__header {
+.top__sellers__header {
   font-family: "Orbitron";
   font-style: normal;
   font-weight: 700;
@@ -1045,11 +1038,11 @@ h1 span {
   display: flex;
 }
 
-._top__sellers__header span {
+.top__sellers__header span {
   color: var(--article-color-pink);
 }
 
-._top__sellers__header img {
+.top__sellers__header img {
   margin-left: 5px;
   margin-top: 15px;
   cursor: pointer;
@@ -1080,7 +1073,7 @@ h3 {
 .top__sellers__item {
   width: 437px;
   height: 123px;
-  background-image: url(../img/top_sellers_li_border.svg);
+  background: url(../img/top_sellers_li_border.svg) no-repeat;
   display: flex;
 }
 
@@ -1158,12 +1151,12 @@ h3 {
 
 .top__sellers__green {
   color: #00ff66;
-  background-image: url(../img/green__percent.svg);
+  background: url(../img/green__percent.svg) no-repeat;
 }
 
 .top__sellers__red {
   color: #ff0000;
-  background-image: url(../img/red__percent.svg);
+  background: url(../img/red__percent.svg) no-repeat;
 }
 
 .top__sellers__link {
@@ -1212,7 +1205,7 @@ h3 {
 }
 
 .what__nft__bg {
-  background: url(../img/what_are_NFT_main.png);
+  background: url(../img/what_are_NFT_main.png) no-repeat;
   width: 1600px;
   height: 556px;
 }
@@ -1567,9 +1560,30 @@ input {
 }
 /* Footer END */
 
+.swiper {
+  margin-left: 7px !important;
+}
+
 .niz {
   /*    delete after responsive      */
   margin-bottom: 1000px;
+}
+
+@media (max-width: 1400px) {
+  .viewall,
+  .wave {
+    display: none;
+  }
+
+  .explore__list {
+    width: 100%;
+    gap: 15px;
+  }
+
+  .explore__view__link {
+    margin-left: 0;
+    justify-content: end;
+  }
 }
 
 @media (max-width: 767px) {
@@ -1804,6 +1818,8 @@ input {
 
   .logo__container {
     min-width: 320px;
+    max-width: 1384px;
+    width: 100%;
     order: 1;
     margin: 0 30px;
     margin-top: 35px;
@@ -1835,8 +1851,8 @@ input {
   .hero__img {
     order: 2;
     display: flex;
-    margin: 0 auto;
     margin-top: 26px;
+    margin-left: 25px;
   }
 
   .hero__img__main__img {
@@ -1946,6 +1962,11 @@ input {
     display: none;
   }
 
+  /* TOP */
+  .top {
+    margin-bottom: 59px;
+  }
+
   .top__header {
     margin-bottom: 36px;
     width: auto;
@@ -1966,9 +1987,10 @@ input {
     width: auto;
   }
 
-  .top__item {
+  /* .top__item {
     margin-right: 25px;
-  }
+  } */
+  /*выключено из-за слайдера. он ставит отступ сам !!!! НЕ ВКЛЮЧАТЬ !!!!*/
 
   .top__item__img1,
   .top__item__img2,
@@ -2118,6 +2140,11 @@ input {
   .swiper {
     width: 100%;
     height: 100%;
+    margin-left: auto !important;
+  }
+
+  .swiper-slide {
+    width: auto;
   }
 
   /* Slider link */
@@ -2151,13 +2178,333 @@ input {
     margin-left: 9px;
   }
   /* Slider END */
+  /* TOP END */
 
+  /* Explore__collections */
+  /* Explore__collections 1-st part */
   .explore__collections {
-    margin: 0 auto;
+    /* margin: 0 auto; */
+    margin-left: 25px;
+    margin-bottom: 112px;
   }
 
   .explore__collections h2 {
     font-size: 16px;
-    
+    margin-left: 1px;
+    margin-bottom: 19px;
   }
+
+  .explore__list {
+    max-width: 326px;
+    width: 100%;
+    margin-left: 0;
+    gap: 0;
+  }
+
+  .explore__list li {
+    width: 152px;
+    height: 40px;
+    margin-bottom: 17px;
+    margin-right: 0px;
+    border: 1.19px solid;
+    -moz-border-image: linear-gradient(to right, #3c79d4, #ffa6fa) 1;
+    -webkit-border-image: linear-gradient(to right, #3c79d4, #ffa6fa) 1;
+    -o-border-image: linear-gradient(to right, #3c79d4, #ffa6fa) 1;
+    border-image: linear-gradient(to right, #3c79d4, #ffa6fa) 1;
+  }
+
+  .explore__left li {
+    margin-right: 17px;
+  }
+
+  .explore__list a {
+    font-size: 10.9922px;
+  }
+
+  .explore__left .explore__margin,
+  .explore__right .explore__margin {
+    margin-bottom: 17px;
+    margin-right: 0px;
+  }
+
+  .explore__view__link {
+    font-size: 8.24417px;
+    margin-left: 0;
+    margin-top: -7px;
+    gap: 7px;
+    justify-content: end;
+  }
+
+  .explore__view__link img {
+    width: 22px;
+    height: 6.5px;
+  }
+
+  .girl {
+    margin-top: -3px;
+    width: 186px;
+    height: 348px;
+    margin-left: 72px;
+  }
+  /* Explore 1-st part END */
+  /* Explore 2-nd part SLIDER */
+  .second__title {
+    font-size: 18.0606px;
+    margin-left: 26px;
+  }
+
+  .explore__second__part {
+    /* margin-left: 19px; */
+    padding-left: 0;
+    margin-bottom: 106px;
+  }
+
+  .explore__second__part__header {
+    margin-bottom: 28px;
+    width: 100%;
+  }
+
+  .explore__second__part__header a {
+    display: none;
+  }
+
+  .explore__second__item {
+    width: 302px;
+    height: 388px;
+    margin-left: 25px;
+    padding-top: 3px;
+    padding-left: 2px;
+  }
+
+  .explore__second__item__1 {
+    background-size: contain;
+  }
+  .explore__second__item__2 {
+    background-size: contain;
+  }
+  .explore__second__item__3 {
+    background-size: contain;
+  }
+
+  .expl_sec_list_top {
+    width: 298px;
+    height: 142px;
+    background-size: contain;
+  }
+
+  .explore__avatar {
+    width: 112.52px;
+    height: 112.52px;
+    padding-top: 71px;
+    padding-left: 2px;
+  }
+
+  .explore__name {
+    margin-top: 49px;
+  }
+
+  .explore__name p {
+    font-size: 16.8391px;
+  }
+
+  .explore__hashteg {
+    margin-top: 2px;
+  }
+
+  .explore__hashteg p {
+    font-size: 13.9587px;
+  }
+
+  .explore__hashteg img {
+    width: 11px;
+    height: 12px;
+    margin-left: 81px;
+  }
+
+  .explore_second__counter {
+    width: 242px;
+    margin-top: 20px;
+    margin-left: 28px;
+    margin-bottom: 28px;
+    justify-content: space-between;
+  }
+
+  .count {
+    font-size: 21.9417px;
+  }
+
+  .count__description {
+    font-size: 13.7136px;
+  }
+
+  .explore__second__follow {
+    width: 162.6px;
+    height: 34px;
+    border: 1.67px solid;
+    -moz-border-image: linear-gradient(to right, #3c79d4, #ffa6fa) 1;
+    -webkit-border-image: linear-gradient(to right, #3c79d4, #ffa6fa) 1;
+    -o-border-image: linear-gradient(to right, #3c79d4, #ffa6fa) 1;
+    border-image: linear-gradient(to right, #3c79d4, #ffa6fa) 1;
+    margin: 0 auto;
+  }
+
+  .explore__second__follow a {
+    font-size: 13.7774px;
+    line-height: 18px;
+  }
+
+  .exp__coll_link {
+    margin-top: 43px;
+    margin-left: 119px;
+  }
+  /* Explore 2-nd part SLIDER */
+
+  /* Top Sellers */
+  .top__sellers {
+    margin-bottom: 107px;
+  }
+
+  .top__sellers__header {
+    font-size: 19.2314px;
+    margin-left: 61px;
+  }
+
+  .top__sellers__header img {
+    width: 10px;
+    height: 8px;
+    margin-top: 10px;
+  }
+
+  h3 {
+    font-size: 14px;
+    margin-left: 29px;
+    margin-top: 19px;
+    width: 313px;
+    line-height: 140.19%;
+    margin-bottom: 26px;
+  }
+
+  .top__sellers__list {
+    margin-left: 29px;
+    gap: 0px;
+    height: 439px;
+    overflow: hidden;
+  }
+
+  .top__sellers__item {
+    width: 318px;
+    height: 91px;
+    background-size: contain;
+    margin-bottom: 24px;
+  }
+
+  .number__of__list {
+    font-size: 13.8072px;
+    margin-left: 10px;
+    margin-top: 0px;
+  }
+
+  .top__sellers_avatar {
+    width: 51px;
+    height: 51px;
+    margin-left: 11px;
+    margin-top: 1px;
+    margin-right: 9px;
+  }
+
+  .sellers__name__summary {
+    width: 112px;
+  }
+
+  .sellers__name__summary p {
+    font-size: 13.8072px;
+    margin-bottom: 9px;
+  }
+
+  .top__sellers_logo {
+    width: 6px;
+    height: 10px;
+  }
+
+  .tft__summary span {
+    font-size: 9.97186px;
+  }
+
+  .top__sellers__percent {
+    font-size: 10.6564px;
+    width: 73px;
+    height: 27px;
+    background-size: contain;
+    margin-top: 38px;
+    margin-left: 16px;
+  }
+
+  .top__sellers__link {
+    display: none;
+  }
+
+  .top__sellers__link__responsive {
+    margin-top: 28px;
+    margin-left: 119px;
+  }
+  /* Top Sellers END */
+
+  /* What are NFT's */
+  .what__nft__bg {
+    width: 375px;
+    height: 300px;
+    background: url(../img/what_are_NFT_main_responsive.png) no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .what__nft__content {
+    margin-left: 17px;
+    margin-top: -178px;
+    padding-top: 36px;
+    padding-left: 42px;
+    width: 294.4px;
+    height: 240px;
+    background-size: cover;
+  }
+
+  .what__nft__content h2 {
+    font-size: 25.87px;
+    margin-bottom: 13px;
+    margin-top: 0;
+  }
+
+  .what__nft__content p {
+    font-size: 11.6415px;
+    line-height: 20.5px;
+    width: 266px;
+    margin-bottom: 29px;
+  }
+
+  .video {
+    display: flex;
+    align-items: center;
+  }
+
+  .what__nft__link {
+    font-size: 10.348px;
+    gap: 27px;
+  }
+
+  .video img {
+    width: 7.11px;
+    height: 10.35px;
+    margin-right: 6px;
+  }
+  /* What are NFT's END */
+
+  /* Subscribe */
+  .subscribe__bg {
+    order: 2;
+  }
+
+  .subscribe__content {
+    order: 1;
+  }
+  /* Subscribe END */
 }
