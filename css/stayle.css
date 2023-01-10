@@ -1206,7 +1206,8 @@ h3 {
 
 .what__nft__bg {
   background: url(../img/what_are_NFT_main.png) no-repeat;
-  width: 1600px;
+  width: 100%;
+  max-width: 1600px;
   height: 556px;
 }
 
@@ -1468,7 +1469,7 @@ input {
   justify-content: space-between;
 }
 
-.footer__list > span {
+.ul__plus__arrow {
   font-family: "Inter";
   font-style: normal;
   font-weight: 500;
@@ -1564,9 +1565,10 @@ input {
   margin-left: 7px !important;
 }
 
-.niz {
-  /*    delete after responsive      */
-  margin-bottom: 1000px;
+@media (max-width: 1600px) {
+  .what__nft__content {
+    margin-left: 180px;
+  }
 }
 
 @media (max-width: 1400px) {
@@ -2248,6 +2250,11 @@ input {
   }
   /* Explore 1-st part END */
   /* Explore 2-nd part SLIDER */
+  .explore__second__list {
+    flex-wrap: nowrap;
+    overflow: hidden;
+  }
+
   .second__title {
     font-size: 18.0606px;
     margin-left: 26px;
@@ -2270,24 +2277,24 @@ input {
 
   .explore__second__item {
     width: 302px;
-    height: 388px;
+    height: 390px;
     margin-left: 25px;
     padding-top: 3px;
     padding-left: 2px;
   }
 
   .explore__second__item__1 {
-    background-size: contain;
+    background-size: cover;
   }
   .explore__second__item__2 {
-    background-size: contain;
+    background-size: cover;
   }
   .explore__second__item__3 {
-    background-size: contain;
+    background-size: cover;
   }
 
   .expl_sec_list_top {
-    width: 298px;
+    width: 301px;
     height: 142px;
     background-size: contain;
   }
@@ -2354,7 +2361,7 @@ input {
   }
 
   .exp__coll_link {
-    margin-top: 43px;
+    margin-top: 41px;
     margin-left: 119px;
   }
   /* Explore 2-nd part SLIDER */
@@ -2450,6 +2457,9 @@ input {
   /* Top Sellers END */
 
   /* What are NFT's */
+  .what__nft {
+    margin-bottom: 77px;
+  }
   .what__nft__bg {
     width: 375px;
     height: 300px;
@@ -2499,12 +2509,214 @@ input {
   /* What are NFT's END */
 
   /* Subscribe */
+  .subscribe {
+    margin-left: 25px;
+    margin-bottom: 1px;
+  }
+
   .subscribe__bg {
     order: 2;
+    background: url(../img/subscribe_responsive.png) no-repeat;
+    width: 326px;
+    height: 380px;
+    margin-bottom: 107px;
   }
 
   .subscribe__content {
     order: 1;
+    margin-left: 0;
+  }
+
+  .subscribe__content h2 {
+    font-size: 26.2703px;
+    margin-bottom: 18px;
+  }
+
+  .subscribe__content p {
+    font-size: 13.1351px;
+    line-height: 23px;
+    margin-bottom: 33px;
+  }
+
+  input {
+    width: 167px;
+    height: 33px;
+    margin-right: 5px;
+    padding-left: 13px;
+  }
+
+  ::placeholder {
+    font-size: 10.2162px;
+  }
+
+  .subscribe button {
+    width: 97px;
+    height: 36px;
+    background-size: contain;
+    font-size: 10.2162px;
+  }
+
+  .subscribe__input {
+    width: auto;
+    height: auto;
+  }
+
+  form {
+    margin-bottom: 108px;
   }
   /* Subscribe END */
+
+  /* Footer */
+  .footer__container {
+    min-width: 324px;
+    margin-left: 0px;
+  }
+
+  .footer__nav {
+    flex-wrap: wrap;
+    padding-top: 25px;
+    padding-bottom: 0;
+  }
+
+  .footer__nav::before {
+    width: 325px;
+    height: 1px;
+    left: 25px;
+  }
+
+  .footer__intro {
+    width: 324px;
+    margin-right: 0;
+    margin-bottom: 49px;
+    margin-left: 25px;
+  }
+
+  .footer__logo {
+    margin-left: 1px;
+    margin-top: 4px;
+  }
+
+  .footer__social__link {
+    margin-left: 0;
+  }
+
+  .footer__list {
+    width: 325px;
+    height: auto;
+    display: block;
+    position: relative;
+    margin-bottom: 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  }
+
+  .footer__list:last-child {
+    border: none;
+    margin-bottom: 18px;
+  }
+
+  /* .footer__list__after::after {
+    content: "";
+    width: 325px;
+    height: 1px;
+    background: #fff;
+    opacity: 0.2;
+    position: absolute;
+    top: 44px;
+    left: 0px;
+  } */
+
+  .footer__nav__container {
+    margin-left: 25px;
+  }
+
+  /* .footer__nav::before {
+    left: 0;
+  } */
+
+  .footer__nav::after {
+    display: none;
+  }
+
+  /* .footer__list:last-child .footer__list::after {
+    display: none;
+  } */
+
+  .ul__plus__arrow {
+    margin-bottom: 0;
+  }
+
+  .footer__item {
+    display: none;
+  }
+
+  .rights__reserved {
+    order: 2;
+    display: flex;
+    position: relative;
+  }
+
+  .rights__reserved span {
+    margin-top: 42px;
+    margin-left: 37px;
+    line-height: 27px;
+  }
+
+  .system__links {
+    order: 1;
+    display: flex;
+    margin-left: 32px;
+  }
+
+  .footer__link {
+    flex-direction: column;
+    justify-content: unset;
+    margin-bottom: 20px;
+  }
+
+  .system__links a {
+    margin-top: 10px;
+  }
+
+  .system__links a:nth-child(2) {
+    border: none;
+    padding: 0;
+    margin-left: 36px;
+  }
+
+  .system__links a:last-child {
+    display: none;
+  }
+
+  .hide {
+    height: 82px;
+    margin-bottom: 77px;
+  }
+
+  .parent {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 19.8983px;
+    font-feature-settings: "salt" on, "liga" off;
+    color: #ffffff;
+  }
+
+  .arrow {
+    position: absolute;
+    top: 4px;
+    right: 23px;
+  }
+
+  .arrow.active{
+    transform: rotate(-180deg);
+  }
+
+  body.touch .sub-menu__list.open .footer__item {
+    display: block;
+  }
+
+  .sub-menu__list {
+    margin-top: 20px;
+  }
+  /* Footer END */
 }
