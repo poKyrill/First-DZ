@@ -8,6 +8,7 @@ $(document).ready(function () {
 var swiper = new Swiper(".mySwiper", {
   slidesPerView: 1,
   loop: true,
+//   spaceBetween: 35,
   breakpoints: {
     320: {
       slidesPerView: 1.06,
